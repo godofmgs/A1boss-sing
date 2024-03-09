@@ -108,16 +108,16 @@
     },
    
     {
-      "server": "89.168.119.242",
+      "server": "130.61.184.164",
       "server_port": 8443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "cfb259bbcfa7e08b",
+      "password": "f8ad0d69dacdf0da",
       "obfs": {
         "type": "salamander",
-        "password": "81150c22b3632c37"
+        "password": "29213aab"
       },
       "tag": "A2hyezpz",
       "type": "hysteria2"
