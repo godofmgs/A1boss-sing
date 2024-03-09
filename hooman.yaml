@@ -44,7 +44,7 @@ proxies:
     port: 8443
     password: f8ad0d69dacdf0da
     obfs: salamander 
-    obfs-password: 9213aab
+    obfs-password: 29213aab
     skip-cert-verify: true
   - name: "A2hysteria-ger"
     type: hysteria2
