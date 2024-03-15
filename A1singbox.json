@@ -153,89 +153,55 @@
       "type": "hysteria2"
     }
   ],
-  "route": {
-    "geoip": {
-            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
-            "download_detour": "direct"
-        },
-        "geosite": {
-            "download_url": "https://github.com\/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
-            "download_detour": "direct"
-        },
+"route": {
     "rules": [
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "network": "udp",
-        "port": 443,
-        "outbound": "block"
-      },
-      {
-        "clash_mode": "direct",
+        "ip_is_private": true,
         "outbound": "direct"
       },
       {
-        "clash_mode": "global",
-        "outbound": "select"
+        "rule_set": [
+          "geosite-category-ads-all"
+        ],
+        "outbound": "block"
       },
-            {
-                "domain_suffix": [
-                    "ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "ir",
-                    "private",
-                    "arvancloud"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "malware",
-                    "phishing",
-                    "cryptominers"
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "other"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "malware",
-                    "phishing"
-                ],
-                "outbound": "block"
-            }
-
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "tag": "geoip-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geoip-ir.srs"
+      }
 
     ],
-    "auto_detect_interface": true,
-    "final": "select"
+"auto_detect_interface": true,
+"final": "select"
   },
-  "experimental": {
-    "clash_api": {
-  "external_controller": "127.0.0.1:9090",
-  "external_ui": "",
-  "external_ui_download_url": "",
-  "external_ui_download_detour": "",
-  "secret":"",
-  "default_mode": ""
 
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
     }
   }
 }
