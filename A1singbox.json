@@ -161,12 +161,6 @@
       },
       {
         "rule_set": [
-          "geosite-category-ads-all"
-        ],
-        "outbound": "block"
-      },
-      {
-        "rule_set": [
           "geosite-ir",
           "geoip-ir"
         ],
@@ -179,12 +173,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs"
-      },
-      {
-        "tag": "geosite-category-ads-all",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
       },
       {
         "tag": "geoip-ir",
