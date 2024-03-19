@@ -202,7 +202,6 @@
             },
             {
                 "geosite": [
-                    "category-ads-all",
                     "malware",
                     "phishing",
                     "cryptominers"
