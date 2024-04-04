@@ -1,30 +1,25 @@
 {
    "outbounds":[
       {
-         "tag":"esme tag config1",
+         "tag":"A2hyezpz",
         ///body config1
       },
       {
-         "tag":"esme tag config2",
+         "tag":"A2hysnew-ca",
         ///body config2
       },
       {
-         "tag":"esme tag config3",
+         "tag":"A2hysteria-ger",
         ///body config3
-      },
-      {
-         "tag":"esme tag config4"
-        ///body config4
       },
       {
          "type":"selector",
          "tag":"Select",
          "outbounds":[
             "Auto",
-            "esme tag config1",
-            "esme tag config2",
-            "esme tag config3",
-            "esme tag config4"
+        "A2hyezpz",
+        "A2hysnew-ca",
+        "A2hysteria-ger"
          ],
          "default":"Auto"
       },
@@ -32,10 +27,9 @@
          "type":"urltest",
          "tag":"Auto",
          "outbounds":[
-            "esme tag config1",
-            "esme tag config2",
-            "esme tag config3",
-            "esme tag config4"
+        "A2hyezpz",
+        "A2hysnew-ca",
+        "A2hysteria-ger"
          ],
          "url":"https://www.gstatic.com/generate_204",
          "interval":"30m"
@@ -65,7 +59,7 @@
             "format":"binary",
             "download_detour":"Select",
             "update_interval":"1d",
-            "url":"https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs"
+            "url":"https://github.com/godofmgs/A1boss-sing/raw/main/geoip-ir.srs"
          },
          {
             "tag":"geosite-ir",
@@ -73,7 +67,7 @@
             "format":"binary",
             "download_detour":"Select",
             "update_interval":"1d",
-            "url":"https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs"
+            "url":"https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs"
          }
       ],
       "rules":[
