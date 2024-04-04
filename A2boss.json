@@ -95,12 +95,12 @@
             "url":"https://github.com/godofmgs/A1boss-sing/raw/main/geoip-ir.srs"
          },
          {
-            "tag":"geoip-ir",
+            "tag":"geosite-category-ads-all",
             "type":"remote",
             "format":"binary",
             "download_detour":"Select",
             "update_interval":"1d",
-            "url":"https://github.com/godofmgs/A1boss-sing/raw/main/geoip-ir.srs"
+            "url":"https://github.com/godofmgs/A1boss-sing/raw/main/geosite-category-ads-all.srs"
          },
          {
             "tag":"geosite-ir",
@@ -130,6 +130,12 @@
                "geosite-ir"
             ],
             "outbound":"direct"
+         },
+                  {
+            "rule_set":[
+              "geosite-category-ads-all"
+            ],
+            "outbound":"block"
          },
          {
             "domain_suffix":[
