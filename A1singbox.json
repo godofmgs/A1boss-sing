@@ -199,21 +199,19 @@
    "dns":{
       "servers":[
          {
-            "tag":"dns-remote",
-            "address":"1.1.1.1",
-            "address_resolver":"dns-direct"
-         },
-         {
-            "tag":"dns-direct",
-            "address":"8.8.8.8",
-            "address_resolver":"dns-local",
-            "detour":"direct"
-         },
-         {
-            "tag":"dns-local",
-            "address":"8.8.8.8",
-            "detour":"direct"
-         },
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      },
          {
             "tag":"dns-block",
             "address":"rcode://success"
