@@ -178,6 +178,11 @@
         ],
         "outbound": "direct"
       },
+      "rule_set": [
+"geosite-category-ads-all"
+        ],
+        "outbound": "block"
+      },
       {
         "domain_suffix": [
           "cdn.yektanet.com",
@@ -219,16 +224,19 @@
         "tag": "geoip-ir",
         "format": "binary",
         "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geoip-ir.srs",
-        "download_detour": "Select",
-        "update_interval": "24h0m0s"
+
+      },
+           {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-category-ads-all.srs"
       },
       {
         "type": "remote",
         "tag": "geosite-ir",
         "format": "binary",
         "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs",
-        "download_detour": "Select",
-        "update_interval": "24h0m0s"
       }
     ],
     "final": "Select",
