@@ -178,7 +178,8 @@
         ],
         "outbound": "direct"
       },
-      "rule_set": [
+      {
+        "rule_set": [
 "geosite-category-ads-all"
         ],
         "outbound": "block"
