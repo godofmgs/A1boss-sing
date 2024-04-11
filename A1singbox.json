@@ -24,10 +24,6 @@
       {
         "tag": "dns-block",
         "address": "rcode://success"
-      },
-      {
-        "tag": "dns-block",
-        "address": "rcode://success"
       }
     ],
     "rules": [
