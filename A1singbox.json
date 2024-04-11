@@ -26,11 +26,7 @@
         "address": "rcode://success"
       }
     ],
-    "rules": [
-      {
-        "protocol": "bittorrent",
-        "server": "dns-block"
-      },
+    "rules": 
       {
         "outbound": "direct",
         "server": "dns-direct"
