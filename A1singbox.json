@@ -237,7 +237,7 @@
         "type": "remote",
         "tag": "geosite-ir",
         "format": "binary",
-        "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs"
+        "url": "https://github.com/godofmgs/A1boss-sing/raw/main/geosite-ir.srs".
       }
     ],
     "final": "Select",
