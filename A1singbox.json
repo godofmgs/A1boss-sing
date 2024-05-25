@@ -104,6 +104,33 @@
       }
     },
     {
+            "detour": "shadowtls-out",
+            "method": "chacha20-ietf-poly1305",
+            "password": "837561d360a130df2a54d5fffa8640e3",
+            "tag": "A1shadow",
+            "type": "shadowsocks",
+            "udp_over_tcp": {
+                "enabled": true,
+                "version": 2
+            }
+        },
+        {
+            "password": "6234c9dc25323bd7b2ba6a91b02999a7",
+            "server": "130.162.36.58",
+            "server_port": 443,
+            "tag": "shadowtls-out",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.telewebion.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                }
+            },
+            "type": "shadowtls",
+            "version": 3
+        },
+    {
       "type": "hysteria2",
       "tag": "A2hysteria-ger",
       "server": "130.162.36.58",
@@ -125,6 +152,7 @@
         "Auto",
         "A2hyezpz",
         "A2hysnew-ca",
+        "A1shadow",
         "A2hysteria-ger"
       ],
       "default": "Auto"
@@ -135,6 +163,7 @@
       "outbounds": [
         "A2hyezpz",
         "A2hysnew-ca",
+        "A1shadow",
         "A2hysteria-ger"
       ],
       "url": "https://www.gstatic.com/generate_204",
