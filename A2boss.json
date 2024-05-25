@@ -79,7 +79,8 @@
         "auto",
         "A2hyezpz",
         "A2hysnew-ca",
-        "A2hysteria-ger"
+        "A2hysteria-ger",
+        "A1shadow"
       ]
     },
     {
@@ -88,7 +89,8 @@
       "outbounds": [
         "A2hyezpz",
         "A2hysnew-ca",
-        "A2hysteria-ger"
+        "A2hysteria-ger",
+        "A1shadow"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -137,6 +139,34 @@
       "tag": "A2hysnew-ca",
       "type": "hysteria2"
     },
+    {
+            "detour": "A1shadow",
+            "method": "chacha20-ietf-poly1305",
+            "password": "837561d360a130df2a54d5fffa8640e3",
+            "tag": "ss",
+            "type": "shadowsocks",
+            "udp_over_tcp": {
+                "enabled": true,
+                "version": 2
+            }
+        },
+        {
+            "password": "6234c9dc25323bd7b2ba6a91b02999a7",
+            "server": "130.162.36.58",
+            "server_port": 443,
+            "tag": "A1shadow",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.telewebion.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                }
+            },
+            "type": "shadowtls",
+            "version": 3
+        },
+    
     {
       "server": "130.162.36.58",
       "server_port": 8443,
