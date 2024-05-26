@@ -125,8 +125,6 @@
         "Auto",
         "A2hyezpz",
         "A2hysnew-ca",
-        "A1shadow",
-        "A2shadow",
         "A2hysteria-ger"
       ],
       "default": "Auto"
@@ -137,8 +135,6 @@
       "outbounds": [
         "A2hyezpz",
         "A2hysnew-ca",
-        "A1shadow",
-        "A2shadow",
         "A2hysteria-ger"
       ],
       "url": "https://www.gstatic.com/generate_204",
