@@ -7,18 +7,18 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://dns.google/dns-query",
+        "address": "8.8.8.8",
         "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "112.215.203.254",
+        "address": "8.4.4.8",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
       {
         "tag": "dns-local",
-        "address": "8.8.8.8",
+        "address": "1.1.1.1",
         "detour": "direct"
       },
       {
