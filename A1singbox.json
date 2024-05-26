@@ -12,7 +12,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "8.4.4.8",
+        "address": "8.8.4.4",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
