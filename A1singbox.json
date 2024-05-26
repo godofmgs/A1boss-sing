@@ -1,6 +1,7 @@
 {
   "log": {
     "level": "warn",
+    "output": "box.log",
     "timestamp": true
   },
   "dns": {
@@ -18,7 +19,7 @@
       },
       {
         "tag": "dns-local",
-        "address": "1.1.1.1",
+        "address": "local",
         "detour": "direct"
       },
       {
@@ -28,30 +29,30 @@
     ],
     "rules": [
       {
-        "protocol": "bittorrent",
-        "server": "dns-block"
-      },
-      {
-        "outbound": "direct",
+        "domain_suffix": ".ir",
+        "geosite": "ir",
         "server": "dns-direct"
       },
       {
-        "outbound": "Select",
-        "server": "dns-remote"
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
       }
-    ]
+    ],
+    "final": "dns-remote",
+    "independent_cache": true
   },
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
-      "interface_name": "singbox-adapter",
-      "mtu": 1500,
+      "mtu": 9000,
       "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
-      "stack": "gvisor",
+      "stack": "mixed",
       "sniff": true,
       "sniff_override_destination": true
     },
@@ -59,7 +60,7 @@
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 2335,
+      "listen_port": 2334,
       "sniff": true,
       "sniff_override_destination": true
     },
@@ -73,6 +74,29 @@
     }
   ],
   "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "A2hyezpz",
+        "A2hysnew-ca",
+        "A2hysteria-ger"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "A2hyezpz",
+        "A2hysnew-ca",
+        "A2hysteria-ger"
+      ],
+      "url": "http://cp.cloudflare.com/",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
     {
       "type": "hysteria2",
       "tag": "A2hyezpz",
@@ -119,26 +143,8 @@
       }
     },
     {
-      "type": "selector",
-      "tag": "Select",
-      "outbounds": [
-        "Auto",
-        "A2hyezpz",
-        "A2hysnew-ca",
-        "A2hysteria-ger"
-      ],
-      "default": "Auto"
-    },
-    {
-      "type": "urltest",
-      "tag": "Auto",
-      "outbounds": [
-        "A2hyezpz",
-        "A2hysnew-ca",
-        "A2hysteria-ger"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "30m0s"
+      "type": "dns",
+      "tag": "dns-out"
     },
     {
       "type": "direct",
@@ -151,28 +157,51 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
     }
   ],
   "route": {
-    "final": "Select",
+    "geoip": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geosite.db"
+    },
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
+      }
+    ],
+    "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "store_fakeip": true
+      "path": "clash.db"
     },
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "Yacd",
-      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "Select",
-      "default_mode": "rule"
+      "external_controller": "127.0.0.1:6756",
+      "secret": "2zsdZrzLFwhT4Y1J"
     }
   }
 }
