@@ -76,13 +76,13 @@
     {
       "type": "hysteria2",
       "tag": "A2hyezpz",
-      "server": "130.61.184.164",
+      "server": "158.180.44.51",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "29213aab"
+        "password": "700a3b5c"
       },
-      "password": "f8ad0d69dacdf0da",
+      "password": "97e1bd963977a4fd",
       "tls": {
         "enabled": true,
         "insecure": true
