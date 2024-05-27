@@ -176,9 +176,15 @@
             "download_detour":"select",
             "update_interval":"1d",
             "url":"https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-ir.srs"
+         },
+ {
+            "tag":"geosite-category-ads-all",
+            "type":"remote",
+            "format":"binary",
+            "download_detour":"select",
+            "update_interval":"1d",
+            "url":"https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-category-ads-all.srs"
          }
-
-
       ],
     "rules": [
       {
@@ -199,6 +205,12 @@
                "geosite-ir"
             ],
             "outbound":"direct"
+         },
+ {
+            "rule_set":[
+               "geosite-category-ads-all"         
+           ],
+            "outbound":"block"
          },
       {
         "clash_mode": "Global",
