@@ -215,12 +215,6 @@
       {
         "clash_mode": "Global",
         "outbound": "select"
-      },
-      {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "geoip": "ir",
-        "outbound": "bypass"
       }
     ],
     "final": "select",
