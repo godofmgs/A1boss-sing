@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "8.8.8.8",
+        "address": "https://dns.quad9.net/dns-query",
         "address_resolver": "dns-direct"
       },
       {
