@@ -125,12 +125,12 @@
  {
       "type": "vless",
       "tag": "A1low",
-      "server": "104.31.16.60",
-      "server_port": 443,
-      "uuid": "7b03a4ad-5f97-4979-b94b-417e907f9fbe",
+      "server": "172.67.186.132",
+      "server_port": 2096,
+      "uuid": "23beafe4-135e-4387-b0f2-c228476694fb",
       "tls": {
         "enabled": true,
-        "server_name": "announces-fist-kodak-customs.trycloudflare.com",
+        "server_name": "Tu.osirisgames.ir",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -138,10 +138,11 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/asdf",
+        "path": "/",
         "headers": {
-          "Host": "announces-fist-kodak-customs.trycloudflare.com"
+          "Host": "Tu.osirisgames.ir"
         },
+        "max_early_data": 1024,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "packet_encoding": ""
