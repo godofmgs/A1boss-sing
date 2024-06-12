@@ -125,28 +125,11 @@
  {
       "type": "vless",
       "tag": "A1low",
-      "server": "172.67.186.132",
-      "server_port": 2096,
-      "uuid": "23beafe4-135e-4387-b0f2-c228476694fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "Tu.osirisgames.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "Tu.osirisgames.ir"
-        },
-        "max_early_data": 1024,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
+      "server": "185.46.0.192",
+      "server_port": 2053,
+      "uuid": "056fb4af-7b0e-494a-94d8-bf1bf1ecb820",
       "packet_encoding": ""
-    },
+      },
     {
       "type": "hysteria2",
       "tag": "A2hyezpz",
