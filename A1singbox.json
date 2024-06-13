@@ -122,14 +122,30 @@
       "domain_strategy": "",
       "tag": "A2hysnew-ca"
     },
- {
+{
       "type": "vless",
       "tag": "A1low",
-      "server": "185.46.0.192",
-      "server_port": 2053,
-      "uuid": "056fb4af-7b0e-494a-94d8-bf1bf1ecb820",
-      "packet_encoding": ""
+      "server": "www.speedtest.net",
+      "server_port": 443,
+      "uuid": "7b03a4ad-5f97-4979-b94b-417e907f9fbe",
+      "tls": {
+        "enabled": true,
+        "server_name": "announces-fist-kodak-customs.trycloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
+      "transport": {
+        "type": "ws",
+        "path": "/asdf",
+        "headers": {
+          "Host": "announces-fist-kodak-customs.trycloudflare.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
     {
       "type": "hysteria2",
       "tag": "A2hyezpz",
