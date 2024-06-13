@@ -125,7 +125,7 @@
 {
       "type": "vless",
       "tag": "A1low",
-      "server": "www.speedtest.net",
+      "server": "104.31.16.60",
       "server_port": 443,
       "uuid": "7b03a4ad-5f97-4979-b94b-417e907f9fbe",
       "tls": {
