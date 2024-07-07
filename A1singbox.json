@@ -117,7 +117,7 @@
         "path": "f7b73482-3763-4480-915f-4d3e94a840fb",
         "type": "ws"
       },
-      "uuid": "f7b73482-3763-4480-915f-4d3e94a840fb",
+      "uuid": "1f7b73482-3763-4480-915f-4d3e94a840fb",
       "type": "vmess",
       "domain_strategy": "",
       "tag": "A2hysnew-ca"
@@ -127,7 +127,7 @@
       "tag": "A1low",
       "server": "104.31.16.60",
       "server_port": 443,
-      "uuid": "7b03a4ad-5f97-4979-b94b-417e907f9fbe",
+      "uuid": "17b03a4ad-5f97-4979-b94b-417e907f9fbe",
       "tls": {
         "enabled": true,
         "server_name": "announces-fist-kodak-customs.trycloudflare.com",
