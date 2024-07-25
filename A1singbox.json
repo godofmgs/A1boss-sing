@@ -9,39 +9,42 @@
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
-    },
-    "servers": [
-      {
-        "tag": "dns-remote",
-        "address": "https://dns.quad9.net/dns-query",
-        "address_resolver": "dns-direct"
-      },
-      {
-        "tag": "dns-direct",
-        "address": "8.8.4.4",
-        "address_resolver": "dns-local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-local",
-        "address": "local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "server": "dns-direct"
-      }
-    ],
-    "final": "dns-remote",
-    "independent_cache": false
   },
+     "final": "local-dns",
+     "rules": [
+       {
+         "clash_mode": "Global",
+         "server": "proxy-dns",
+         "source_ip_cidr": [
+           "172.19.0.1/28"
+         ]
+       },
+       {
+         "server": "proxy-dns",
+         "source_ip_cidr": [
+           "172.19.0.1/28"
+         ]
+       }
+     ],
+     "servers": [
+       {
+         "address": "tcp://8.8.8.8",
+         "address_resolver": "local-dns",
+         "detour": "select",
+         "tag": "proxy-dns"
+       },
+       {
+         "address": "local",
+         "detour": "direct",
+         "tag": "local-dns"
+       },
+       {
+         "address": "rcode://success",
+         "tag": "block"
+       }
+     ],
+     "strategy": "prefer_ipv4"
+},
   "inbounds": [
     {
       "type": "tun",
