@@ -99,28 +99,20 @@
       "interval": "1m0s",
       "idle_timeout": "1h40m0s"
     },
-{
-      "alter_id": 0,
-      "packet_encoding": "",
-      "security": "auto",
-      "server": "104.31.16.60",
-      "server_port": 443,
+    {
+      "type": "hysteria2",
+      "tag": "A2hysnew-ca",
+      "server": "129.153.63.4",
+      "server_port": 8443,
+      "obfs": {
+        "type": "salamander",
+        "password": "fd07f177"
+      },
+      "password": "962bdc58d4226749",
       "tls": {
         "enabled": true,
-        "insecure": false,
-        "server_name": "trigger-andorra-walking-notify.trycloudflare.com"
-      },
-      "transport": {
-        "headers": {
-          "Host": "trigger-andorra-walking-notify.trycloudflare.com"
-        },
-        "path": "f7b73482-3763-4480-915f-4d3e94a840fb",
-        "type": "ws"
-      },
-      "uuid": "1f7b73482-3763-4480-915f-4d3e94a840fb",
-      "type": "vmess",
-      "domain_strategy": "",
-      "tag": "A2hysnew-ca"
+        "insecure": true
+      }
     },
 {
       "type": "vless",
