@@ -82,7 +82,7 @@
         "A2hyezpz",
         "A2hysnew-ca",
         "A2hysteria-ger",
-        "A1low"
+        "A4hysca"
       ],
       "default": "auto"
     },
@@ -93,7 +93,7 @@
         "A2hyezpz",
         "A2hysnew-ca",
         "A2hysteria-ger",
-        "A1low"
+        "A4hysca"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "1m0s",
@@ -114,29 +114,20 @@
         "insecure": true
       }
     },
-{
-      "type": "vless",
-      "tag": "A1low",
-      "server": "104.31.16.60",
-      "server_port": 443,
-      "uuid": "17b03a4ad-5f97-4979-b94b-417e907f9fbe",
+ {
+      "type": "hysteria2",
+      "tag": "A4hysca",
+      "server": "192.18.146.141",
+      "server_port": 8443,
+      "obfs": {
+        "type": "salamander",
+        "password": "f1d97038"
+      },
+      "password": "65fb6325436148e5",
       "tls": {
         "enabled": true,
-        "server_name": "announces-fist-kodak-customs.trycloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/asdf",
-        "headers": {
-          "Host": "announces-fist-kodak-customs.trycloudflare.com"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": ""
+        "insecure": true
+      }
     },
     {
       "type": "hysteria2",
