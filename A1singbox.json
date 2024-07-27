@@ -24,6 +24,16 @@
          "source_ip_cidr": [
            "172.19.0.1/28"
          ]
+       },
+       {
+         "clash_mode": "Direct",
+         "server": "direct-dns"
+       },
+       {
+         "rule_set": [
+           "geosite-ir"
+         ],
+         "server": "direct-dns"
        }
      ],
      "servers": [
@@ -211,6 +221,10 @@
         "inbound": "dns-in",
         "outbound": "dns-out"
       },
+      {
+         "clash_mode": "Global",
+         "outbound": "proxy"
+       },
      {
         "clash_mode": "Direct",
         "outbound": "direct"
