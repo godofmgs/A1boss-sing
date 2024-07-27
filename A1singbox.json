@@ -223,7 +223,7 @@
       },
       {
          "clash_mode": "Global",
-         "outbound": "proxy"
+         "outbound": "proxy-dns"
        },
      {
         "clash_mode": "Direct",
