@@ -160,13 +160,13 @@
     {
       "type": "hysteria2",
       "tag": "A2hysteria-ger",
-      "server": "89.168.85.85",
+      "server": "130.162.61.104",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "feb8ce13"
+        "password": "5cd0323d"
       },
-      "password": "cf1511108096860a",
+      "password": "3dcc48a6ef624cd2",
       "tls": {
         "enabled": true,
         "insecure": true
