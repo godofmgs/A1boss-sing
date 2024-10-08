@@ -149,7 +149,7 @@
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "5a367718b"
+        "password": "a367718b"
       },
       "password": "5dd1f02f87c68563",
       "tls": {
