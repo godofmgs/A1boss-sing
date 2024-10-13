@@ -143,22 +143,20 @@
       }
     },
 {
-  "type": "hysteria",
-  "tag": "A2hyezpz",
-
   "server": "89.168.82.31",
   "server_port": 8443,
    "tls": {
         "enabled": true,
-         "server_name": "www.ghbi.ir",
+         "server_name": "89.168.82.31",
         "insecure": true
       },
   "up_mbps": 300,
   "down_mbps": 300,
   "obfs": "vpnforfriends",
-  "disable_mtu_discovery": true
-     
-    },
+  "disable_mtu_discovery": true,
+  "tag": "A2hyezpz",
+  "type": "hysteria"
+     },
     {
       "type": "hysteria2",
       "tag": "A2hysteria-ger",
