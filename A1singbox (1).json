@@ -156,6 +156,7 @@
   "disable_mtu_discovery": true,
   "network": "udp",
       "tls": {
+        "enabled": true,
         "insecure": true
       }
     },
