@@ -142,15 +142,20 @@
         "insecure": true
       }
     },
-    {
-      "type": "hysteria2",
-      "tag": "A2hyezpz",
-      "server": "130.61.90.204",
-      "server_port": 8443,
-      "obfs": {
-        "type": "salamander",
-        "password": "a367718b"
-      },
+{
+  "type": "hysteria",
+  "tag": "A2hyezpz",
+
+  "server": "89.168.82.31",
+  "server_port": 8443,
+  "up_mbps": 300,
+  "down_mbps": 300,
+  "obfs": "vpnforfriends",
+  "recv_window_conn": 13631488,
+  "recv_window": 3407872,
+  "disable_mtu_discovery": true,
+  "network": "udp"
+},
       "password": "5dd1f02f87c68563",
       "tls": {
         "enabled": true,
