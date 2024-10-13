@@ -148,17 +148,16 @@
 
   "server": "89.168.82.31",
   "server_port": 8443,
+   "tls": {
+        "enabled": true,
+         "server_name": "www.ghbi.ir",
+        "insecure": true
+      },
   "up_mbps": 300,
   "down_mbps": 300,
   "obfs": "vpnforfriends",
-  "recv_window_conn": 13631488,
-  "recv_window": 3407872,
-  "disable_mtu_discovery": true,
-  "network": "udp",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
+  "disable_mtu_discovery": true
+     
     },
     {
       "type": "hysteria2",
