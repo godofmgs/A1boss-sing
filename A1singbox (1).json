@@ -154,11 +154,8 @@
   "recv_window_conn": 13631488,
   "recv_window": 3407872,
   "disable_mtu_discovery": true,
-  "network": "udp"
-},
-      "password": "5dd1f02f87c68563",
+  "network": "udp",
       "tls": {
-        "enabled": true,
         "insecure": true
       }
     },
