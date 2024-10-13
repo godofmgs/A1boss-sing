@@ -130,13 +130,13 @@
  {
       "type": "hysteria2",
       "tag": "A4hysca",
-      "server": "192.18.146.141",
+      "server": "130.61.90.204",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "f1d97038"
+        "password": "a367718b"
       },
-      "password": "65fb6325436148e5",
+      "password": "5dd1f02f87c68563",
       "tls": {
         "enabled": true,
         "insecure": true
