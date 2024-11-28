@@ -38,7 +38,7 @@
      ],
      "servers": [
        {
-         "address": "10.202.10.202",
+         "address": "tcp://8.8.8.8",
          "address_resolver": "local-dns",
          "detour": "select",
          "tag": "proxy-dns"
