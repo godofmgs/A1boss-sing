@@ -38,7 +38,7 @@
      ],
      "servers": [
        {
-         "address": "https://208.67.222.222/dns-query",
+         "address": "10.202.10.202",
          "address_resolver": "local-dns",
          "detour": "select",
          "tag": "proxy-dns"
@@ -160,13 +160,13 @@
     {
       "type": "hysteria2",
       "tag": "A2hysteria-ger",
-      "server": "130.162.212.209",
+      "server": "130.162.61.104",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "305cb9b0"
+        "password": "5cd0323d"
       },
-      "password": "fba010b08280aa77",
+      "password": "3dcc48a6ef624cd2",
       "tls": {
         "enabled": true,
         "insecure": true
