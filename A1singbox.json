@@ -60,8 +60,10 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "inet4_address": "172.19.0.1/28",
-      "inet6_address": "fdfe:dcba:9876::1/126",
+        "address": [
+        "172.19.0.1/28",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
