@@ -56,11 +56,11 @@ proxies:
     skip-cert-verify: true
   - name: "A2hysteria-ger"
     type: hysteria2
-    server: 89.168.85.85
+    server: 192.18.146.141
     port: 8443
-    password: cf1511108096860a
+    password: 65fb6325436148e5
     obfs: salamander 
-    obfs-password: feb8ce13
+    obfs-password: f1d97038
     skip-cert-verify: true
 proxy-groups:
   - name: MANUAL
