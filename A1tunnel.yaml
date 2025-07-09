@@ -31,14 +31,6 @@ dns:
     - 112.215.203.254
 proxies:
 proxies:
-  - name: '♻️ 36.36 MB | ⏳ : ∞ - A1boss-tunnel'
-    type: vless
-    server: 1.1.1.1
-    port: 9828
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
   - name: All Location
     type: vless
     server: 892389823.webnama.com.tr
