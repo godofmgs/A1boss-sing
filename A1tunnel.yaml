@@ -30,7 +30,6 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-proxies:
   - name: All Location
     type: vless
     server: 892389823.webnama.com.tr
