@@ -162,16 +162,17 @@
     {
       "type": "hysteria2",
       "tag": "A2hysteria-ger",
-      "server": "130.61.90.204",
+      "server": "129.159.25.243",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
         "password": "a367718b"
       },
-      "password": "5dd1f02f87c68563",
+      "password": "PwsCoRfE9p",
       "tls": {
         "enabled": true,
-        "insecure": true
+        "insecure": true,
+        "server_name":"canva.com"
       }
     },
     {
