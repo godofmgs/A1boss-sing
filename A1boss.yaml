@@ -1,0 +1,114 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+dns:
+  enabled: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: "A2hysnew-ca"
+    type: hysteria2
+    server: 129.153.63.4
+    port: 8443
+    password: 962bdc58d4226749
+    obfs: salamander 
+    obfs-password: fd07f177
+    skip-cert-verify: true
+  - name: "A2hysterca2"
+    type: hysteria2
+    server: 192.18.146.141
+    port: 8443
+    password: 65fb6325436148e5
+    obfs: salamander 
+    obfs-password: f1d97038
+    skip-cert-verify: true
+  - name: "A2hysezpz"
+    type: hysteria2
+    server: 130.162.61.104
+    port: 8443
+    password: 3dcc48a6ef624cd2
+    obfs: salamander 
+    obfs-password: 5cd0323d
+    skip-cert-verify: true
+  - name: "A2hysteria-ger"
+    type: hysteria2
+    server: 129.159.25.243
+    port: 8443
+    password: PwsCoRfE9p
+    obfs: salamander 
+    obfs-password: a367718b
+    skip-cert-verify: true
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
+  - name: BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
+  - name: Global
+    type: select
+    proxies:
+      - DIRECT
+      - MANUAL
+      - BEST-PING
+rules:
+  - GEOIP,IR,Global
+  - MATCH,MANUAL
