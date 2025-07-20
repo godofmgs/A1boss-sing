@@ -118,5 +118,6 @@ rules:
   - IP-CIDR,198.18.0.0/15,DIRECT   # Benchmarking/reserved
   - DST-PORT,1900,DIRECT           # SSDP (screen mirroring discovery)
   - DST-PORT,5353,DIRECT           # mDNS (Chromecast & AirPlay)
+  - DOMAIN-SUFFIX,local,DIRECT     # .local devices
   - GEOIP,IR,Global
   - MATCH,MANUAL
