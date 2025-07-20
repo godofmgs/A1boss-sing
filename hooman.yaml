@@ -30,17 +30,6 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: Q1tunnel
-    type: vless
-    server: 37.152.188.252
-    port: 2085
-    uuid: f3d62187-569a-4bce-b798-71c9ea551a8d
-    network: tcp
-    tls: true
-    servername: canva.com
-    flow: xtls-rprx-vision
-    skip-cert-verify: true
-    ip-version: dual
   - name: "A2hysnew-ca"
     type: hysteria2
     server: 129.153.63.4
@@ -77,7 +66,6 @@ proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - Q1tunnel
       - A2hysterca2
       - A2hysezpz
       - A2hysteria-ger
@@ -92,7 +80,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - Q1tunnel
       - A2hysterca2
       - A2hysezpz
       - A2hysteria-ger
@@ -103,7 +90,6 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies:
-      - Q1tunnel
       - A2hysterca2
       - A2hysezpz
       - A2hysteria-ger
@@ -113,7 +99,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - Q1tunnel
       - A2hysterca2
       - A2hysezpz
       - A2hysteria-ger
