@@ -30,106 +30,58 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: All Location
-    type: vless
-    server: 892389823.webnama.com.tr
-    port: 1517
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
+  - type: vless
+    name: Q1tunnel
+    server: 37.152.188.252
+    port: 2085
+    uuid: f3d62187-569a-4bce-b798-71c9ea551a8d
     network: tcp
-    tls: false
-    ip-version: dual
-  - name: Germany 1
-    type: vless
-    server: 300232332.webnama.com.tr
-    port: 1517
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: Germany 2
-    type: vless
-    server: 99823232.webnama.com.tr
-    port: 1517
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: Germany 3
-    type: vless
-    server: 99823232.webnama.com.tr
-    port: 1517
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: Germany 5
-    type: vless
-    server: all32-vip.f-sub.com
-    port: 2434
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
+    servername: canva.com
     tls: true
-    servername: chess.com
+    encryption: none
+    flow: xtls-rprx-vision
     skip-cert-verify: true
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: yGgU4VVwpWk3sY54VgDxYVg77n5i-4jduHegq6PqPyA
-    ip-version: dual
-    udp: true
-  - name: Netherland
-    type: vless
-    server: 233923233.webnama.com.tr
-    port: 4928
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: USA
-    type: vless
-    server: 78234873823.webnama.com.tr
-    port: 3789
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: France
-    type: vless
-    server: 230920393.f-sub.com
-    port: 3799
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: Poland
-    type: vless
-    server: 3900230223.torob.com.tr
-    port: 3799
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
-  - name: England
-    type: vless
-    server: 2393123233.torob.com.tr
-    port: 1429
-    uuid: 05a1d426-c180-4a23-89cc-a02166d3a7d1
-    network: tcp
-    tls: false
-    ip-version: dual
+  - name: "A2hysnew-ca"
+    type: hysteria2
+    server: 129.153.63.4
+    port: 8443
+    password: 962bdc58d4226749
+    obfs: salamander
+    obfs-password: fd07f177
+    skip-cert-verify: true
+  - name: "A2hysterca2"
+    type: hysteria2
+    server: 192.18.146.141
+    port: 8443
+    password: 65fb6325436148e5
+    obfs: salamander
+    obfs-password: f1d97038
+    skip-cert-verify: true
+  - name: "A2hysezpz"
+    type: hysteria2
+    server: 130.162.61.104
+    port: 8443
+    password: 3dcc48a6ef624cd2
+    obfs: salamander
+    obfs-password: 5cd0323d
+    skip-cert-verify: true
+  - name: "A2hysteria-ger"
+    type: hysteria2
+    server: 129.159.25.243
+    port: 8443
+    password: PwsCoRfE9p
+    obfs: salamander
+    obfs-password: a367718b
+    skip-cert-verify: true
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
-      - All Location
-      - Germany 1
-      - Germany 2
-      - Germany 3
-      - Germany 5
-      - Netherland
-      - USA
-      - France
-      - Poland
-      - England
+      - Q1tunnel
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -140,47 +92,32 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - All Location
-      - Germany 1
-      - Germany 2
-      - Germany 3
-      - Germany 5
-      - Netherland
-      - USA
-      - France
-      - Poland
-      - England
+      - Q1tunnel
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
   - name: BEST-PING
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - All Location
-      - Germany 1
-      - Germany 2
-      - Germany 3
-      - Germany 5
-      - Netherland
-      - USA
-      - France
-      - Poland
-      - England
+      - Q1tunnel
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - All Location
-      - Germany 1
-      - Germany 2
-      - Germany 3
-      - Germany 5
-      - Netherland
-      - USA
-      - France
-      - Poland
-      - England
+      - Q1tunnel
+      - A2hysterca2
+      - A2hysezpz
+      - A2hysteria-ger
+      - A2hysnew-ca
   - name: Global
     type: select
     proxies:
@@ -188,13 +125,5 @@ proxy-groups:
       - MANUAL
       - BEST-PING
 rules:
-  - IP-CIDR,127.0.0.1/8,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,224.0.0.0/4,DIRECT     # Multicast (used by Chromecast/mDNS)
-  - IP-CIDR,198.18.0.0/15,DIRECT   # Benchmarking/reserved
-  - DST-PORT,1900,DIRECT           # SSDP (screen mirroring discovery)
-  - DST-PORT,5353,DIRECT           # mDNS (Chromecast & AirPlay)      
   - GEOIP,IR,Global
   - MATCH,MANUAL
